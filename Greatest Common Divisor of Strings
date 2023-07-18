@@ -1,0 +1,16 @@
+class Solution {
+    public String gcdOfStrings(String a, String b) {
+       if(!(a+b).equals(b+a))
+			 return "";
+			 int gcd=gcd(a.length(),b.length());
+			 return a.substring(0,gcd);       
+        
+    }
+		public int gcd(int n1,int n2)
+		{
+			if(n2==0)
+			return n1;
+
+			return gcd(n2,n1%n2);
+		}
+}
